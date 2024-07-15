@@ -32,16 +32,13 @@ try:
 
     pay = input("Great! Now how will you like to pay? (card, cash) ")
 
-    if pay.lower() == "card":
-        pay = "VISA CARD"
-    elif pay.lower() == "cash":
-        pay = "CASH"
-
-
     if anything.lower() == "ketchup":
         Total = Burger_am + anything_am * 0.25
     elif anything.lower() == "fries":
         Total = Burger_am + anything_am * 5.00
+
+    card = Total if pay == 'card' else 0.00
+    cash = Total if pay == 'cash' else 0.00
 
     Reciept = f"""
                  BURGER RESTAURANT ONLINE 
@@ -60,8 +57,9 @@ DESCRIPTION                   QTY            AMOUNT
 Total QTY : {int(Burger) + anything_am}
 
                 Bill Amount :               {Total}
-                Paid Method ({pay}) :   {Total}
-
+                Paid Method (VISA CARD) :   {card}
+                Bal. Amt. (USD)   :         {cash}
+                
 Thank you. Please Visit Again
                           """
 
