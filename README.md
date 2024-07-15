@@ -1,2 +1,1 @@
-# Receipt-Program
-This is a simple Restaurants Receipt Program
+Make sure to make file named as "bill.txt" and write 1 in that file.
